@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Counter from "./components/Counter";
 import InputComponent from "./components/InputComponent";
 import Form from "./components/Form";
+import TextInputWithFocusButton from "./components/TextInputWithFocusButton";
 const data = {
       title: "99% sale off!",
       callToAction: "All items must go"
@@ -28,6 +29,7 @@ function App() {
         <Counter />
         <InputComponent />
           <Form />
+          <TextInputWithFocusButton />
       </div>
 )
 }
