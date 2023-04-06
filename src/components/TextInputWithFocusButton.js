@@ -1,7 +1,10 @@
-import {useRef} from "react";
+import {useRef, useState} from "react";
 
 function TextInputWithFocusButton() {
     const inputEl = useRef(null);
+    console.log("DAT DAT");
+    console.log(useRef(null));
+    console.log(useState(0));
 
     function onButtonClick() {
         inputEl.current.focus();
