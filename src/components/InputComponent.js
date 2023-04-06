@@ -1,24 +1,20 @@
 import {useState} from "react";
 
 function InputComponent() {
-    let [counter, setCounter] = useState(0);
+    const [inputText, setText] = useState('Hello');
 
-    function handleIncrease() {
-        setCounter(counter + 1)
-    }
-
-
-    function handleDescrease() {
-        setCounter(counter - 1)
+    function handleChange(e) {
+        setText(e.target.value)
     }
 
     return (
-        <div>
-            <h1>Count: {counter}</h1>
-            <button onClick={handleIncrease}>Increase</button>
-            <button onClick={handleDescrease}>Decrease</button>
-        </div>
-    )
+      <div>
+          <p>You typed: {inputText}</p>
+          <label>Input:</label>
+          <input value={inputText} onChange={handleChange}/>
+          <button onClick={() => setText('Hello')}>Reset</button>
+      </div>
+    );
 }
 
 export default InputComponent;

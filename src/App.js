@@ -4,7 +4,9 @@ import Heading from "./components/Heading";
 import Btn from "./components/Btn";
 import Toggler from "./components/Toggler";
 import Header from "./components/Header";
+import Counter from "./components/Counter";
 import InputComponent from "./components/InputComponent";
+import Form from "./components/Form";
 const data = {
       title: "99% sale off!",
       callToAction: "All items must go"
@@ -21,7 +23,13 @@ function App() {
   // return <Btn/>
   // return <Toggler />
   // return <Header title={data.title} callToAction={data.callToAction}/>
-  return <InputComponent />
+  return (
+      <div>
+        <Counter />
+        <InputComponent />
+          <Form />
+      </div>
+)
 }
 
 // function Header() {
