@@ -2,8 +2,10 @@ import './App.css';
 import Counter from "./components/Counter";
 import MealsProvider, {useMealsListContext} from "./provider/MealsProvider";
 import MealsList from "./components/MealsList";
-import {useContext} from "react";
+import {createContext, useContext} from "react";
 import MealsCounter from "./components/MealsCounter";
+import ThemeProvider from "./provider/ThemeProvider";
+import ContextButton from "./components/ContextButton";
 
 const data = {
     title: "99% sale off!",
@@ -37,8 +39,19 @@ function App() {
                 <MealsList />
                 <MealsCounter />
             </MealsProvider>
+            {/*<ThemeProvider>*/}
+            {/*    <ContextButton/>*/}
+            {/*</ThemeProvider>*/}
         </>
     )
+    // return (
+    //     <>
+    //         <h1>Main Component</h1>
+    //         <ThemeProvider>
+    //             <ContextButton />
+    //         </ThemeProvider>
+    //     </>
+    // )
 }
 
 export default App;
