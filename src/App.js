@@ -35,23 +35,15 @@ function App() {
     const mealsContext = useMealsListContext();
     return (
         <>
-            <MealsProvider>
-                <MealsList />
-                <MealsCounter />
-            </MealsProvider>
-            {/*<ThemeProvider>*/}
-            {/*    <ContextButton/>*/}
-            {/*</ThemeProvider>*/}
+            {/*<MealsProvider>*/}
+            {/*    <MealsList />*/}
+            {/*    <MealsCounter />*/}
+            {/*</MealsProvider>*/}
+            <ThemeProvider>
+                <ContextButton/>
+            </ThemeProvider>
         </>
     )
-    // return (
-    //     <>
-    //         <h1>Main Component</h1>
-    //         <ThemeProvider>
-    //             <ContextButton />
-    //         </ThemeProvider>
-    //     </>
-    // )
 }
 
 export default App;
