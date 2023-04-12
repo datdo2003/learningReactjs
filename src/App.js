@@ -6,6 +6,8 @@ import {createContext, useContext} from "react";
 import MealsCounter from "./components/MealsCounter";
 import ThemeProvider from "./provider/ThemeProvider";
 import ContextButton from "./components/ContextButton";
+import TestProvider from "./provider/TestProvider";
+import TestComponent from "./components/TestComponent";
 
 const data = {
     title: "99% sale off!",
@@ -42,6 +44,9 @@ function App() {
             <ThemeProvider>
                 <ContextButton/>
             </ThemeProvider>
+            <TestProvider>
+                <TestComponent/>
+            </TestProvider>
         </>
     )
 }
