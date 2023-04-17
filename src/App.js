@@ -8,6 +8,9 @@ import ThemeProvider from "./provider/ThemeProvider";
 import ContextButton from "./components/ContextButton";
 import TestProvider from "./provider/TestProvider";
 import TestComponent from "./components/TestComponent";
+import Homepage from "./components/Homepage";
+import Aboutme from "./components/Aboutme";
+import {Link, Route, Routes} from "react-router-dom";
 
 const data = {
     title: "99% sale off!",
@@ -34,20 +37,35 @@ function App() {
     //     </div>
     // )
     // Demo using useContext
-    const mealsContext = useMealsListContext();
+    // const mealsContext = useMealsListContext();
+    // return (
+    //     <>
+    //         {/*<MealsProvider>*/}
+    //         {/*    <MealsList />*/}
+    //         {/*    <MealsCounter />*/}
+    //         {/*</MealsProvider>*/}
+    //         <ThemeProvider>
+    //             <ContextButton/>
+    //         </ThemeProvider>
+    //         <TestProvider>
+    //             <TestComponent/>
+    //         </TestProvider>
+    //     </>
+    // )
+
+    // Demo about routing
     return (
-        <>
-            {/*<MealsProvider>*/}
-            {/*    <MealsList />*/}
-            {/*    <MealsCounter />*/}
-            {/*</MealsProvider>*/}
-            <ThemeProvider>
-                <ContextButton/>
-            </ThemeProvider>
-            <TestProvider>
-                <TestComponent/>
-            </TestProvider>
-        </>
+        <div className="App">
+            <nav className="nav">
+                {/*Use Link instead of anchor tag to avoid refresh the whole page*/}
+                <Link to="/" className="nav-item">Home</Link>
+                <Link to="/aboutme" className="nav-item">About me</Link>
+            </nav>
+            <Routes>
+                <Route path="/" element={<Homepage/>}/>
+                <Route path="/aboutme" element={<Aboutme/>}/>
+            </Routes>
+        </div>
     )
 }
 
