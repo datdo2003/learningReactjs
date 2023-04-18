@@ -11,6 +11,8 @@ import TestComponent from "./components/TestComponent";
 import Homepage from "./components/Homepage";
 import Aboutme from "./components/Aboutme";
 import {Link, Route, Routes} from "react-router-dom";
+import Contact from "./components/Contact";
+import AboutLittleLemon from "./components/AboutLittleLemon";
 
 const data = {
     title: "99% sale off!",
@@ -36,6 +38,7 @@ function App() {
     //         <TextInputWithFocusButton/>
     //     </div>
     // )
+
     // Demo using useContext
     // const mealsContext = useMealsListContext();
     // return (
@@ -59,11 +62,13 @@ function App() {
             <nav className="nav">
                 {/*Use Link instead of anchor tag to avoid refresh the whole page*/}
                 <Link to="/" className="nav-item">Home</Link>
-                <Link to="/aboutme" className="nav-item">About me</Link>
+                <Link to="/about" className="nav-item">About</Link>
+                <Link to="/contact" className="nav-item">Contact</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<Homepage/>}/>
-                <Route path="/aboutme" element={<Aboutme/>}/>
+                <Route path="/about" element={<AboutLittleLemon/>}/>
+                <Route path="/contact" element={<Contact/>}/>
             </Routes>
         </div>
     )
